@@ -21,8 +21,7 @@ class UniNoten {
                 .toArray();
     }
 
-    // Method 4: Get the maximum rounded grade
-    public int getMaxRoundedGrade(int[] noten) {
+    public int maxRundNote(int[] noten) {
         return Arrays.stream(noten)
                 .map(this::rundNote)
                 .max()
@@ -183,7 +182,7 @@ public class Main{
         System.out.println("Nicht ausreichende Noten: " + Arrays.toString(universitatNoten.nichtAusreichende(noten)));
         System.out.println("Durchschnittswert der Noten: " + universitatNoten.Durchschnitt(noten));
         System.out.println("Abgerundete Noten: " + Arrays.toString(universitatNoten.abgerundeteNoten(noten)));
-        System.out.println("Maximale abgerundete Note: " + universitatNoten.getMaxRoundedGrade(noten));
+        System.out.println("Maximale abgerundete Note: " + universitatNoten.maxRundNote(noten));
 
         System.out.println();
         //2:
